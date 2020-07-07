@@ -9,7 +9,7 @@ pipeline {
     }
     stages {
 		stage('Style') {
-			step{
+			steps {
 				sh label: 'Style CSS', script: """
 				cd ${WORKSPACE}/www/css
 				npx stylelint "*.css"
