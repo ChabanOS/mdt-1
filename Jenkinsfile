@@ -4,6 +4,9 @@ pipeline {
         choice choices: ['DEVELOP', 'RELEASE'], description: '', name: 'RELEASE'
         string defaultValue: '0.0.1', description: '', name: 'RELEASE_VER', trim: false
     }
+	environment {
+		configBasedir = "${WORKSPACE}"
+	}
     tools {
         nodejs 'Node12'
     }
